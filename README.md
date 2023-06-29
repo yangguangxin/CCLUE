@@ -9,7 +9,23 @@
 <a href="https://github.com/Ethan-yt/cclue/blob/main/LICENSE"><img alt="GitHub license" src="https://img.shields.io/github/license/ethan-yt/cclue"></a>
 </p>
 
+## 安装过程及环境
+
+1. debian-10.13.0
+
+1. Python 3.7.3
+
+1. 使用国内镜像https://mirrors.aliyun.com/pypi/simple/ --default-timeout=1000
+   
+`pip3 install tokenizers==0.10 -i https://mirrors.aliyun.com/pypi/simple/ --default-timeout=1000`
+
 CCLUE是一个古文自然语言理解的测评基准，包括代表性任务对应的数据集、基准模型、评测代码，研究人员能够通过几行代码快速测评各种预训练语言模型。
+
+1. GPU docker的正确姿势
+
+` docker run -itd --gpus all --name 容器名 -e NVIDIA_DRIVER_CAPABILITIES=compute,utility -e NVIDIA_VISIBLE_DEVICES=all 镜像名`
+ 　　多出来的东西其实就是这个家伙：NVIDIA_DRIVER_CAPABILITIES=compute,utility
+    　　也就是说，如果你不改这个环境变量，宿主机的nvidia driver在容器内是仅作为utility存在的，如果加上compute，宿主机的英伟达driver将对容器提供计算支持(所谓的计算支持也就是cuda支持)。
 
 ## 新闻
 
