@@ -20,6 +20,15 @@
 `pip3 install tokenizers==0.10 -i https://mirrors.aliyun.com/pypi/simple/ --default-timeout=1000`
 
 CCLUE是一个古文自然语言理解的测评基准，包括代表性任务对应的数据集、基准模型、评测代码，研究人员能够通过几行代码快速测评各种预训练语言模型。
+代理
+export http_proxy=http://192.168.116.1:1080
+export https_proxy=http://192.168.116.1:1080
+
+
+
+pip3 install -r requirements.txt -i https://mirrors.aliyun.com/pypi/simple/ --default-timeout=1000
+
+
 
 1. GPU docker的正确姿势
 
