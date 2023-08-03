@@ -13,9 +13,9 @@ show_title: false
         <textarea
           class="text-box"
           v-model="inputText"
-          maxlength="512"
+          maxlength="1024"
         ></textarea>
-        <span class="word-count">{{inputText.length}}/512</span>
+        <span class="word-count">{{inputText.length}}/1024</span>
       </div>
       <div class="text-box-wrap">
         <div class="text-box" v-html="outputHtml"></div>
